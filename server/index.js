@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const app = express();
 
-// app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get('/', async (req, res) => {
   res.status(200).json({ data: 'Server is connected!' });
